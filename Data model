@@ -1,0 +1,109 @@
+class Client :
+------------
+    String clientId;
+    String name;
+    String email;
+    String phone;
+    String password;
+    List<Project> assignedProjects;
+
+class Engineer :
+--------------
+    String engineerId;
+    String name;
+    String email;
+    String phone;
+    String password;
+
+class Project :
+-------------
+    String projectId;
+    String projectName;
+    String buildingType;
+    double plotSizeSqFt;
+    double budget;
+    String requirements;
+    String clientId;
+    List<ArchitecturalDrawing> drawings;
+    List<ProgressPhase> phases;
+    Estimation estimation;
+    Quotation quotation;
+    List<Comment> comments;
+
+class ArchitecturalDrawing : 
+--------------------------
+    String drawingId;
+    String fileName;
+    String filePath;
+    LocalDate uploadDate;
+    String uploadedBy;
+
+class Comment :
+-------------
+    String commentId;
+    String projectId;
+    String authorId;
+    String authorRole; 
+    String message;
+    LocalDateTime timestamp;
+
+class Estimation :
+-----------------
+    double materialCost;
+    double labourCost;
+    double additionalCharges;
+    double totalEstimatedCost;
+
+class Quotation :
+---------------
+    String quotationId;
+    String projectId;
+    double finalQuotedAmount;
+    LocalDate generatedDate;
+    String notes;
+
+class ProgressPhase :
+-------------------
+    String phaseId;
+    String phaseName;
+    String status;
+    LocalDate startDate;
+    LocalDate endDate;
+    List<String> imagePaths;
+
+class ClientRequest :
+-------------------
+    String requestId;
+    String clientId;
+    String projectId;
+    String message;
+    LocalDateTime requestDate;
+    String status;
+
+class Message :
+-------------
+    String messageId;
+    String senderId;
+    String receiverId;
+    String content;
+    LocalDateTime sentTime;
+
+class Storage:
+-------------
+List<Client> clientList = new ArrayList<>();
+List<Engineer> engineerList = new ArrayList<>();
+List<Project> projectList = new ArrayList<>();
+List<ArchitecturalDrawing> drawingList = new ArrayList<>();
+List<ProgressPhase> phaseList = new ArrayList<>();
+List<Comment> commentList = new ArrayList<>();
+List<Quotation> quotationList = new ArrayList<>();
+List<ClientRequest> requestList = new ArrayList<>();
+List<Message> messageList = new ArrayList<>();
+
+
+
+
+
+
+
+
